@@ -2,7 +2,7 @@ console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 
   // This is the collection array to contain albums.
-let myCollection = []
+let myCollection = [];
 
  // Creates a new album object with the specified properties. The
  // new album object is added to the specified collection parameter
@@ -22,22 +22,28 @@ function addToCollection(collection, title, artist, yearPublished) {
         title: title,
         artist: artist,
         yearPublished: yearPublished
-      }
+      };
     
       collection.push(record);
   return record;
 }
-console.log(addToCollection(myCollection, 'Running Up That Hill (A Deal With God) [2018 Remaster]','Kate Bush', '2018'))
-console.log(addToCollection(myCollection, 'Die With A Smile', 'Bruno Mars & Lady Gaga', '2024'))
-console.log(addToCollection(myCollection, 'Good Things Change', 'Cam Wehunt', '2023'))
-console.log(addToCollection(myCollection, 'Lies Lies Lies', 'Morgan Wallen', '2024'))
-console.log(addToCollection(myCollection, 'So Small', 'Carrie Underwood', '2007'))
-console.log(addToCollection(myCollection, 'Truth Truth Truth', 'Morgan Wallen', '2024'))
+console.log(addToCollection(myCollection, 'Running Up That Hill (A Deal With God) [2018 Remaster]','Kate Bush', '2018'));
+console.log(addToCollection(myCollection, 'Die With A Smile', 'Bruno Mars & Lady Gaga', '2024'));
+console.log(addToCollection(myCollection, 'Good Things Change', 'Cam Wehunt', '2023'));
+console.log(addToCollection(myCollection, 'Lies Lies Lies', 'Morgan Wallen', '2024'));
+console.log(addToCollection(myCollection, 'So Small', 'Carrie Underwood', '2007'));
+console.log(addToCollection(myCollection, 'Truth Truth Truth', 'Morgan Wallen', '2024'));
 
-console.log(myCollection)
+console.log(myCollection);
 
-
-
+// function to loop through collection
+function showCollection(collection) {
+  for (i = 0; i < collection.length; i++) {
+    let record = collection[i];
+    console.log(`${record.title} by ${record.artist}, published in ${record.yearPublished}`);
+  }
+}
+showCollection(myCollection);
 
 
 

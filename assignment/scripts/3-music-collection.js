@@ -39,11 +39,25 @@ console.log(myCollection);
 // function to loop through collection
 function showCollection(collection) {
   for (i = 0; i < collection.length; i++) {
-    let record = collection[i];
-    console.log(`${record.title} by ${record.artist}, published in ${record.yearPublished}`);
+    let album = collection[i];
+    console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
   }
-}
+} // end showCollection function
 showCollection(myCollection);
+
+//function to findByArtist
+function findByArtist(collection, artist){
+  let matchingArtistByAlbum = [];
+  for ( i=0; i < collection.length; i++ ){
+    if (collection[i].artist === artist){
+      matchingArtistByAlbum.push(collection[i])
+    }
+  }
+  return matchingArtistByAlbum;
+} // end findByArtist function
+console.log(findByArtist(myCollection, 'Morgan Wallen'));
+console.log(findByArtist(myCollection, 'Kendrick Lamar'));
+console.log(findByArtist(myCollection, 'Morgan Wallen'));
 
 
 
